@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  # root to: "shelters#index"
-
+  resource :shelters do
+    resource :bookings, only: [:index, :add, :edit, :destroy]
+  end
+  root to: "shelters#index"
 end
