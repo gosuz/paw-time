@@ -5,6 +5,10 @@ class SheltersController < ApplicationController
   end
   # delete later
 
+  def show
+    @shelter = Shelter.find(params[:id])
+  end
+
   def new
     @shelter = Shelter.new
   end
