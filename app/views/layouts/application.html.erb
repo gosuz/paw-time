@@ -6,11 +6,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %> 
+    <%# <div class="banner"
+    style= "background-image: url(<%= (@list.present? && @list.photo.attached?) ? cl_image_path(@list.photo.key) : image_path('https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4') %>
+    <div class="banner">
+      <h1 id="header">Paw Time</h1>
+    <div class="search"></div>
+    </div>
+   
     <%= yield %>
+
   </body>
 </html>
