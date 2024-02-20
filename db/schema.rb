@@ -55,6 +55,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_035712) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "pets", force: :cascade do |t|
+    t.string "name"
+    t.string "species"
+    t.string "image"
+    t.bigint "shelter_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shelter_id"], name: "index_pets_on_shelter_id"
+  end
+
   create_table "shelters", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -82,5 +92,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_035712) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "shelters"
   add_foreign_key "bookings", "users"
+  add_foreign_key "pets", "shelters"
   add_foreign_key "shelters", "users"
 end
