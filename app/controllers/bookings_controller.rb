@@ -10,6 +10,11 @@ class BookingsController < ApplicationController
     end
   end
 
+  def index
+    # get all bookings instance
+    @bookings = Booking.all
+  end
+
   private
 
   def bookings_params
