@@ -1,6 +1,15 @@
+<%# Helens code w/o simple_form_for %>
+<%# <%= simple_form_for [@shelter, @booking] do |f| %>
+<%# <%= f.input :date %>
+<%# <%= f.input :time_slot %>
+<%# <%= f.input :reason %>
+<%# <%= f.submit %>
+<%# <% end %>
+
+<%# Stuff I added need to test it works %>
 <%= simple_form_for [@shelter, @booking] do |f| %>
-<%= f.input :date %>
-<%= f.input :time_slot %>
-<%= f.input :reason %>
-<%= f.submit %>
+  <%= f.input :date %>
+  <%= f.input :time_slot,  as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :reason %>
+  <%= f.submit %>
 <% end %>
