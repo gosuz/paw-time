@@ -3,10 +3,11 @@ class BookingsController < ApplicationController
     @shelter = Shelter.find(params[:shelter_id])
     @booking = Booking.new(bookings_params)
     @booking.shelter = @shelter
+    @booking.user = current_user
     if @booking.save
-      redirect_to shelter_bookings(@booking.shelter_id)
+      redirect_to bookings_path(@shelter)
     else
-      render "shelters/:id", status: :unprocessable_entity
+      render "shelters/show", status: :unprocessable_entity
     end
   end
 
