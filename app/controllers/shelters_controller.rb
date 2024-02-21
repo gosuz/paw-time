@@ -3,7 +3,6 @@ class SheltersController < ApplicationController
   def index
     @shelters = Shelter.all
   end
-  # delete later
 
   def show
     @shelter = Shelter.find(params[:id])
@@ -20,7 +19,8 @@ class SheltersController < ApplicationController
       # redirect_to shelter they just created
       redirect_to shelter_path(@shelter)
     else
-
+      # loads the page again, with the info thye filled
+      render :new, status: :unprocessable_entity
     end
   end
 
