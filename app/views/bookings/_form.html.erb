@@ -1,4 +1,4 @@
-<%= simple_form_for [@shelters, @booking] do |f| %>
+<%= simple_form_for [@shelter, @booking] do |f| %>
   <%= f.input :date, as: :date, html5: true%>
   <%= f.input :time_slot, collection: ["10:00 ~ 12:00", "13:00~15:00
 ", "16:00 ~ 18:00"], as: :radio_buttons %>

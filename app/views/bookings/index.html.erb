@@ -1,1 +1,13 @@
 <h1>My Bookings</h1>
+<div class="booking-card">
+<% @bookings.first(2).each do |booking| %>
+<div class="card-product">
+ <%= image_tag booking.shelter.banner, class: "card-img" %>  <div class="card-product-infos">
+    <h2><%= booking.shelter.name %></h2>
+    <p><%= booking.date %></p>
+    <p>Pending.</p>
+  </div>
+  </div>
+  <% end %>
+</div>
+</div>
