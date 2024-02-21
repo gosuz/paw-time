@@ -9,7 +9,7 @@ class Booking < ApplicationRecord
   # t.boolean "status" booking
   private
   def set_default
-    status = "true" if status.blank?
+    status = true if status.blank?
   end
 
 end
