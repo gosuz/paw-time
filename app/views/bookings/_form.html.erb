@@ -1,6 +1,19 @@
 <%= simple_form_for [@shelter, @booking] do |f| %>
-<%= f.input :date %>
-<%= f.input :time_slot %>
-<%= f.input :reason %>
-<%= f.submit %>
+  <%= f.input :date, as: :date, html5: true%>
+  <%= f.input :time_slot, collection: ["10:00 ~ 12:00", "13:00~15:00
+", "16:00 ~ 18:00"], as: :radio_buttons %>
+  <%= f.input :reason, collection: ['Volunteer', 'Visit only', 'Adoption'] %>
+  <%# need to fix the empty box later %>
+  <%= f.submit %>
 <% end %>
+
+<%# <%= f.input :time_slot, collection: ["10:00 ~ 12:00", "13:00~15:00
+", "16:00 ~ 18:00"], as: :radio_buttons %>
+
+<%# Best practice- updated later - reason dropdown %>
+
+<%# <%= f.input :rating, collection: ['Good', 'Very Good', 'Excellent'] %>
+
+<%# # app/models/restaurant.rb
+RATINGS = ['Good', 'Very Good', 'Excellent'] %>
+<%# <%= f.input :rating, collection: Restaurant::RATINGS %>
