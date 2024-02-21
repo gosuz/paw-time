@@ -9,7 +9,6 @@
       <div class="card-text">
         <h2><%= pet.name %></h2>
         <h3><%= shelter.location %></h3>
-        <p><%= shelter.description %></p>
       </div>
       <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-blue text-decoration-none text-white"%>
       </div>
@@ -17,51 +16,28 @@
       <% end %>
      </div>
 
-
-    <div class="info-card">
-    <h2>Text here</h2>
-    <p>Small description here</p>
+    <div class="d-flex info-card">
+    <div>
+    <img src="https://thefamilysupportcenter.org/wp-content/uploads/2018/04/kisspng-dog-paw-cougar-drawing-clip-art-paw-prints-5ad0eba3679bd0.8414908415236412514244.png" alt="dog paw" style="width: 100px">
+    </div>
+    <h3 class="m-3">Warm Up With A Fuzzy Friend!</h3>
+    <p class="mt-4"><strong>Pet Time</strong> is here to help you find shelters near you and reserving a visit with a furry friend. Whether you wish to adopt, volunteer or just pet a good boy or girl, <strong>Pet Time</strong> is the way to create meaningful furry friend time! </p>
     </div>
 
-  <div class="card-container">
+   <div class="card-container">
+    <% @shelters.last(3).each do |shelter| %>
     <div class="card">
-        <img class = "card-img" src="https://cdn.britannica.com/86/166986-050-4CEFE5DE/cute-kitten-and-puppy-outdoors-in-grass.jpg" alt="cat and dog">
+      <%= image_tag shelter.banner, class: "card-img" %>
       <div class="card-content">
       <div class="card-text">
-        <h2>Shelter Name</h2>
-        <h3>Location</h3>
-        <p>Small description</p>
+        <h2><%= shelter.name %></h2>
+        <h3><%= shelter.location %></h3>
       </div>
-      <button class="button-blue">Click Me</button>
-      </div>
-    </div>
-
-
-      <div class="card">
-        <img class = "card-img" src="https://cdn.britannica.com/86/166986-050-4CEFE5DE/cute-kitten-and-puppy-outdoors-in-grass.jpg" alt="cat and dog">
-      <div class="card-content">
-      <div class="card-text">
-        <h2>Shelter Name</h2>
-        <h3>Location</h3>
-        <p>Small description</p>
-      </div>
-      <button class="button-blue">Click Me</button>
+      <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-yellow text-decoration-none text-white"%>
       </div>
     </div>
-
-
-      <div class="card">
-        <img class = "card-img" src="https://cdn.britannica.com/86/166986-050-4CEFE5DE/cute-kitten-and-puppy-outdoors-in-grass.jpg" alt="cat and dog">
-      <div class="card-content">
-      <div class="card-text">
-        <h2>Shelter Name</h2>
-        <h3>Location</h3>
-        <p>Small description</p>
-      </div>
-      <button class="button-blue">Click Me</button>
-      </div>
-    </div>
-  </div>
+      <% end %>
+     </div>
 
 </div>
 
