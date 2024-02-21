@@ -1,95 +1,37 @@
+
 <div class="container">
     <div class="row">
         <div class="info col-md-8">
-            <div class="row m-3">
-                <h2>Description </h2>
-                <p><%= @shelter.description %><p>
-            </div>
-            <div class="card-container">
-                <div class="card col-2">
-                    <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
-                <div class="card-content">
-                <div class="card-text">
-                    <h2>Pet Name</h2>
-                    <h3>Location</h3>
-                    <p>Small description</p>
-                </div>
-                <button class="button-blue">Click Me</button>
-                </div>
-                </div>
-
-
-               <div class="card col-2">
-                    <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
-                <div class="card-content">
-                <div class="card-text">
-                    <h2>Pet Name</h2>
-                    <h3>Location</h3>
-                    <p>Small description</p>
-                </div>
-                <button class="button-blue">Click Me</button>
-                </div>
-                </div>
-
-                <div class="card col-2">
-                    <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
-                <div class="card-content">
-                <div class="card-text">
-                    <h2>Pet Name</h2>
-                    <h3>Location</h3>
-                    <p>Small description</p>
-                </div>
-                <button class="button-blue">Click Me</button>
-                </div>
-                </div>
-
-                <div class="card col-2">
-                    <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
-                <div class="card-content">
-                <div class="card-text">
-                    <h2>Pet Name</h2>
-                    <h3>Location</h3>
-                    <p>Small description</p>
-                </div>
-                <button class="button-blue">Click Me</button>
-                </div>
-                </div>
-
-
-               <div class="card col-2">
-                    <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
-                <div class="card-content">
-                <div class="card-text">
-                    <h2>Pet Name</h2>
-                    <h3>Location</h3>
-                    <p>Small description</p>
-                </div>
-                <button class="button-blue">Click Me</button>
-                </div>
-                </div>
-
-                <div class="card col-2">
-                    <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
-                <div class="card-content">
-                <div class="card-text">
-                    <h2>Pet Name</h2>
-                    <h3>Location</h3>
-                    <p>Small description</p>
-                </div>
-                <button class="button-blue">Click Me</button>
-                </div>
-                </div>
-
-            </div>
+          <>
+          <div class="row m-3">
+              <h1><%= @shelter.name %></h1>
+              <p><%= @shelter.description %><p>
+          </div>
+          <div class="grid">
+              <% pets = @shelter.pets %>
+              <% pets.each do |pet| %>
+                <div class="card">
+                  <%= image_tag pet.image, class: "card-img" %>
+                  <div class="card-content">
+                    <div class="card-text">
+                      <h2><%= pet.name %></h2>
+                      <h3><%= @shelter.location %></h3>
+                    </div>
+                    <p></p>
+                  </div>
+              </div>
+              <% end %>
+          </div>
         </div>
         <div class="col-md-4 p-3">
             <div class="bg-white border sticky-top p-3 my-3">
               <div class="py-2">
                 <h2>Booking</h2>
               </div>
-              <div class="d-grid gap-2">
-                <button type="button" class="btn btn-secondary btn-block">Insert button</button>
-              </div>
+              <%# <div class="d-grid gap-2">
+                <button type="button" class="button-blue-lg">Insert button</button>
+              </div> %>
+                <%= render "bookings/form" %>
             </div>
         </div>
     </div>
