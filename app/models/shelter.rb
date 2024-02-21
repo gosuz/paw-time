@@ -1,6 +1,7 @@
 class Shelter < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_many :pets
   # added this line
   has_many_attached :photos
 

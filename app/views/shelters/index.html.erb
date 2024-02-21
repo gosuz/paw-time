@@ -1,18 +1,22 @@
 
 <div class="container">
-
   <div class="card-container">
+    <% @shelters.first(3).each do |shelter| %>
+    <% pet = shelter.pets.sample %>
     <div class="card">
-        <img class = "card-img" src="https://web.pdx.edu/~strae/a341/multi-column-website/img/cute-dog-shiba-inu-ryuji-japan-44.jpg" alt="shiba dog">
+      <%= image_tag pet.image, class: "card-img" %>
       <div class="card-content">
       <div class="card-text">
-        <h2></h2>
-        <h3>Location</h3>
-        <p>Small description</p>
+        <h2><%= pet.name %></h2>
+        <h3><%= shelter.location %></h3>
+        <p><%= shelter.description %></p>
       </div>
-      <button class="button-blue">Click Me</button>
+      <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-blue text-decoration-none text-white"%>
       </div>
     </div>
+      <% end %>
+     </div>
+
 
     <div class="info-card">
     <h2>Text here</h2>
