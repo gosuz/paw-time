@@ -6,6 +6,7 @@ class SheltersController < ApplicationController
 
   def show
     @shelter = Shelter.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
