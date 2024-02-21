@@ -20,7 +20,7 @@ end
 puts "Creating shelters..."
 User.all.each do |user|
   2.times do |t|
-    shelter = Shelter.new(name: Faker::Company.name, location: Faker::Address.street_name, capacity: rand(1..4), logo: "https://ibb.co/xL3xdbL", banner: "https://source.unsplash.com/random/?pet&#{rand(1..20)}", description: Faker::Company.catch_phrase)
+    shelter = Shelter.new(name: Faker::Company.name, location: Faker::Address.street_name, capacity: rand(1..4), logo: "https://ibb.co/xL3xdbL", banner: "https://source.unsplash.com/random/?building&#{rand(1..20)}", description: Faker::Company.catch_phrase)
     shelter.user = user
     shelter.save
   end
