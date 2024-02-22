@@ -3,11 +3,25 @@
   text-align: center;
   background-image: linear-gradient(to bottom, rgba(#C6EDF2, 0.20), rgba(#6CDAE7, 0.60)), url("https://i0.wp.com/middletownhumanesociety.com/wp-content/uploads/2020/08/volunteer-mhs.jpg");
   color: #FFE799;
-  background-size: fill;
+  background-size: cover;
   font-size: 30px;
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.shelter-banner {
+  padding: 60px;
+  background-image: linear-gradient(to bottom, rgba(#C6EDF2, 0.20), rgba(#6CDAE7, 0.60));
+  text-align: center;
+  background-size: cover;
+  font-size: 30px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }

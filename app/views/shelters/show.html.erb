@@ -1,21 +1,25 @@
 
+ <div class="shelter-banner" style= "background-image: url(<%= (@shelter.c_banner.present? && @shelter.c_banner.attached?) ? cl_image_path(@shelter.c_banner.key) : image_path('https://cdn.firespring.com/images/422d7c06-dc88-45f3-830c-b3851e15e1c3.jpg') %>)">
+      <h1 class="white-text"><%= @shelter.name %></h1>
+<%=image_tag @shelter.logo, class: "avatar-bordered"%>
+    </div>
 <div class="container">
+
     <div class="row">
         <div class="info col-md-8">
-          <>
+        <div class="m-5"></div>
           <div class="row m-3">
-              <h1><%= @shelter.name %></h1>
+              <h1 class="mt-4"><%= @shelter.name %></h1>
               <p><%= @shelter.description %><p>
           </div>
-          <div class="grid">
+          <div class="grid-show">
               <% pets = @shelter.pets %>
               <% pets.each do |pet| %>
                 <div class="card">
                   <%= image_tag pet.image, class: "card-img" %>
                   <div class="card-content">
                     <div class="card-text">
-                      <h2><%= pet.name %></h2>
-                      <h3><%= @shelter.location %></h3>
+                      <h1><%= pet.name %></h1>
                     </div>
                     <p></p>
                   </div>
