@@ -1,0 +1,8 @@
+<%# Create a form that has inputs for name, species(dog or cat), photo %>
+<%= simple_form_for [@shelter, @pet] do |f| %>
+  <%= f.input :name %>
+  <%# drop down for it??? %>
+  <%= f.input :species, collection: ['Dog', 'Cat'], as: :radio_buttons %>
+  <%= f.input :c_pet, as: :file,  label: "Upload image of pet: " %>
+  <%= f.submit 'Add pet' %>
+<% end %>
