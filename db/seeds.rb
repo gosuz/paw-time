@@ -23,16 +23,15 @@ shelter1 = Shelter.new(name: "Humane Society", location: Faker::Address.street_n
 shelter1.user = go
 shelter1.save
 
- shelter02 = Shelter.new(name: "Pet Angel Gate", location: Faker::Address.street_name, capacity: 4, logo: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/z6m8msmakq9uplkagsnp.png", banner: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708528064/w5zwxs1wew0ep3f46z1a.jpg", description: "Welcome to Pet Angel Gate, where every cat's purrfect match awaits! Our shelter specializes in rescuing and rehabilitating feline friends, offering a haven for cats of all shapes, sizes, and personalities. Whether you're looking for a playful kitten or a wise old tabby, we're here to help you find your new best friend.")
- shelter02.user = nina
- shelter02.save
+shelter02 = Shelter.new(name: "Pet Angel Gate", location: Faker::Address.street_name, capacity: 4, logo: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/z6m8msmakq9uplkagsnp.png", banner: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708528064/w5zwxs1wew0ep3f46z1a.jpg", description: "Welcome to Pet Angel Gate, where every cat's purrfect match awaits! Our shelter specializes in rescuing and rehabilitating feline friends, offering a haven for cats of all shapes, sizes, and personalities. Whether you're looking for a playful kitten or a wise old tabby, we're here to help you find your new best friend.")
+shelter02.user = nina
+shelter02.save
 
 shelter3 = Shelter.new(name: "Animal Haven", location: Faker::Address.street_name, capacity: 4, logo: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/fq30g1wnx32vblulne9k.png", banner: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708528064/pjl5rs42z8ssfnd4sk2u.jpg", description: "Animal Haven is dedicated to providing a sanctuary for pets in need. Our shelter offers a haven for abandoned, abused, and neglected pups, giving them a second chance at a happy life. From energetic puppies to gentle seniors, we have a diverse range of dogs waiting to join loving families.")
 shelter3.user = sarah
 shelter3.save
 
-shelter4 = Shelter.new(name: "Furry Friends Animal Society", location: Faker::Address.street_name, capacity: 4, logo: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523158/q4zggyg4bthaw6kaxjyq.png", banner: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708528063/nhaqo0p3gxjwzzizldmj.jpg
-", description: "Furry Friends Animal Society is where every pet's story begins anew. Our shelter specializes in rescuing and rehoming dogs and cats, offering a compassionate environment for animals in need. With personalized matchmaking services and ongoing support for adopters, we're dedicated to ensuring happy endings for every furry friend.")
+shelter4 = Shelter.new(name: "Furry Friends Animal Society", location: Faker::Address.street_name, capacity: 4, logo: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523158/q4zggyg4bthaw6kaxjyq.png", banner: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708528063/nhaqo0p3gxjwzzizldmj.jpg", description: "Furry Friends Animal Society is where every pet's story begins anew. Our shelter specializes in rescuing and rehoming dogs and cats, offering a compassionate environment for animals in need. With personalized matchmaking services and ongoing support for adopters, we're dedicated to ensuring happy endings for every furry friend.")
 shelter4.user = hellen
 shelter4.save
 
@@ -112,8 +111,7 @@ cat7.save
 puts "Generating bookings shelters..."
 reason = ["Volunteer", "Visit Only", "Adoption"]
 status = ["Pending", "Confirmed", "Declined"]
-timeSlot = ["10:00 ~ 12:00", "13:00~15:00
-", "16:00 ~ 18:00"]
+timeSlot = ["10:00 ~ 12:00", "13:00~15:00", "16:00 ~ 18:00"]
 
 Shelter.all.each do |shelter|
   rand(1..5).times do |t|

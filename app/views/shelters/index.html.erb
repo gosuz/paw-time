@@ -25,8 +25,8 @@
     <% @shelters.last(6).each do |shelter| %>
       <div class="card">
         <%# <%= image_tag shelter.banner, class: "card-img" %>
-        <% if shelter.banner.attached? %>
-          <%= cl_image_tag shelter.banner.key, class: "card-img" %>
+        <% if shelter.c_banner.attached? %>
+          <%= cl_image_tag shelter.c_banner.key, class: "card-img" %>
         <% else %>
           <%= image_tag shelter.banner, class: "card-img" %>
         <% end %>
