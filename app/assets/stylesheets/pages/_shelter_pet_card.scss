@@ -1,0 +1,68 @@
+.shelter-pet-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 7px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.shelter-pet-card {
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 17rem;
+  height: 20rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shelter-pet-card-container-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.shelter-pet-card-content {
+  padding: 16px;
+  margin-bottom: 20px;
+  right: 16px;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.shelter-pet-card-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 576px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

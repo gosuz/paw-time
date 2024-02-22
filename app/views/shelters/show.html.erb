@@ -12,16 +12,15 @@
               <h1 class="mt-4"><%= @shelter.name %></h1>
               <p><%= @shelter.description %><p>
           </div>
-          <div class="grid-show">
+          <div class="shelter-pet-card-container">
               <% pets = @shelter.pets %>
               <% pets.each do |pet| %>
-                <div class="card">
-                  <%= image_tag pet.image, class: "card-img" %>
-                  <div class="card-content">
-                    <div class="card-text">
-                      <h1><%= pet.name %></h1>
+                <div class="shelter-pet-card">
+                  <%= image_tag pet.image, class: "shelter-pet-card-container-image" %>
+                  <div class="shelter-pet-card-content">
+                    <div class="shelter-pet-card-content-text">
+                      <h2><%= pet.name %></h2>
                     </div>
-                    <p></p>
                   </div>
               </div>
               <% end %>
