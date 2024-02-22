@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+  root to: "shelters#index"
   resources :shelters do
-    resources :bookings, only: [:index, :create, :edit, :update, :destroy, :new]
+    resources :bookings, only: [:create]
     resources :pets, only: [:new, :create]
   end
 
-  get "/bookings", to: "bookings#index", as: :bookings
-  root to: "shelters#index"
-end
+  resources :bookings, only: [:index, :update, :edit, :destroy, :create]
 
-# added :new for testing
+end

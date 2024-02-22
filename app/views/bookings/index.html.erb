@@ -1,13 +1,56 @@
-<h1>My Bookings</h1>
-<div class="booking-card">
-<% @bookings.first(2).each do |booking| %>
-<div class="card-product">
- <%= image_tag booking.shelter.banner, class: "card-img" %>  <div class="card-product-infos">
-    <h2><%= booking.shelter.name %></h2>
-    <p><%= booking.date %></p>
-    <p>Pending.</p>
+<h1>Bookings</h1>
+<div class="container">
+  <div class="col-2">
+    <ul>
+      <li>
+        <a href="#my-bookings">My Bookings </a>
+      </li>
+      <li>
+        <% if @user.shelters.any? %>
+          <a href="#shelter-bookings">My Shelter's Bookings </a>
+        <% end %>
+      </li>
+    </ul>
   </div>
+  <div class="booking-card">
+    <h2 id="my-bookings">My Bookings</h2>
+    <%@user.bookings.each do |booking| %>
+      <div class="card-product">
+        <%= image_tag booking.shelter.banner, class: "card-img" %>
+        <div class="card-product-infos">
+          <h2><%= booking.shelter.name %></h2>
+          <p><%= booking.date %></p>
+          <p><%= booking.status %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
+  <% if @user.shelters.any? %>
+    <h2 id="shelter-bookings">My Shelter's Booking</h2>
+    <div>
+      <% @user.shelters.each do |shelter| %>
+        <% shelter.bookings.each do |booking| %>
+          <h3><%= booking.shelter.name %></h3>
+          <div class="card-product ">
+            <p><%= booking.user.email %></p>
+            <p><%= booking.date %></p>
+            <% if booking.pending? %>
+              <div class="d-flex">
+                <%= simple_form_for booking do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'Confirmed'} %>
+                  <%= f.submit 'Confirm', class: 'btn btn-info' %>
+                <% end %>
+                <%= simple_form_for booking do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: 'Declined'} %>
+                  <%= f.submit 'Decline', class: 'btn btn-light' %>
+                <% end %>
+              </div>
+            <% else %>
+              <p class='booking-tag'><%= booking.status %></p>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   <% end %>
-</div>
 </div>
