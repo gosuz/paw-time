@@ -1,45 +1,45 @@
-
 <div class="container">
-<div class="grid">
+  <div class="grid">
     <% @shelters.first(3).each do |shelter| %>
-    <% pet = shelter.pets.sample %>
-    <div class="card">
-      <%= image_tag pet.image, class: "card-img" %>
-      <div class="card-content">
-      <div class="card-text">
-        <h2><%= pet.name %></h2>
-        <h3><%= shelter.location %></h3>
+      <% pet = shelter.pets.sample %>
+      <div class="card">
+        <%= image_tag pet.image, class: "card-img" %>
+        <div class="card-content">
+          <div class="card-text">
+            <h2><%= pet.name %></h2>
+            <h3><%= shelter.location %></h3>
+          </div>
+          <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-blue text-decoration-none text-white"%>
+        </div>
       </div>
-      <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-blue text-decoration-none text-white"%>
-      </div>
-    </div>
-      <% end %>
-    </div>
-
-    <div class="d-flex info-card">
+    <% end %>
+  </div>
+  <div class="d-flex info-card">
     <div>
-    <img src="https://thefamilysupportcenter.org/wp-content/uploads/2018/04/kisspng-dog-paw-cougar-drawing-clip-art-paw-prints-5ad0eba3679bd0.8414908415236412514244.png" alt="dog paw" style="width: 100px">
+      <img src="https://thefamilysupportcenter.org/wp-content/uploads/2018/04/kisspng-dog-paw-cougar-drawing-clip-art-paw-prints-5ad0eba3679bd0.8414908415236412514244.png" alt="dog paw" style="width: 100px">
     </div>
     <h3 class="m-3">Warm Up With A Fuzzy Friend!</h3>
     <p class="mt-4"><strong>Pet Time</strong> is here to help you find shelters near you and reserving a visit with a furry friend. Whether you wish to adopt, volunteer or just pet a good boy or girl, <strong>Pet Time</strong> is the way to create meaningful furry friend time! </p>
-    </div>
-
-    <div class="grid">
+  </div>
+  <div class="grid">
     <% @shelters.last(6).each do |shelter| %>
-    <div class="card">
-      <%= image_tag shelter.banner, class: "card-img" %>
-      <div class="card-content">
-      <div class="card-text">
-        <h2><%= shelter.name %></h2>
-        <h3><%= shelter.location %></h3>
+      <div class="card">
+        <%# <%= image_tag shelter.banner, class: "card-img" %>
+        <% if shelter.banner.attached? %>
+          <%= cl_image_tag shelter.banner.key, class: "card-img" %>
+        <% else %>
+          <%= image_tag shelter.banner, class: "card-img" %>
+        <% end %>
+        <div class="card-content">
+          <div class="card-text">
+            <h2><%= shelter.name %></h2>
+            <h3><%= shelter.location %></h3>
+          </div>
+          <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-yellow text-decoration-none text-white"%>
+        </div>
       </div>
-      <%= link_to 'Visit Me!', shelter_path(shelter), class: "button-yellow text-decoration-none text-white"%>
-      </div>
-    </div>
-      <% end %>
-     </div>
-
+    <% end %>
+  </div>
 </div>
-
 <footer>
 </footer>
