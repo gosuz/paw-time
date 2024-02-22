@@ -2,7 +2,6 @@
 <div class="container">
     <div class="row">
         <div class="info col-md-8">
-          <>
           <div class="row m-3">
               <h1><%= @shelter.name %></h1>
               <p><%= @shelter.description %><p>
@@ -24,6 +23,7 @@
           </div>
         </div>
         <div class="col-md-4 p-3">
+           <% unless @shelter.user == current_user %>
             <div class="bg-white border sticky-top p-3 my-3">
               <div class="py-2">
                 <h2>Booking</h2>
@@ -33,6 +33,11 @@
               </div> %>
                 <%= render "bookings/form" %>
             </div>
+          <% end %>
         </div>
     </div>
 </div>
+
+<% if @shelter.user == current_user %>
+  <%= render "pets/form" %>
+<% end %>
