@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
 
   def index
     # get all bookings instance
+    @user = current_user
     @bookings = Booking.all
   end
 
