@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
     # get all bookings instance
+    @user = current_user
     @bookings = Booking.all
   end
 
@@ -15,6 +16,7 @@ class BookingsController < ApplicationController
       render "shelters/show", status: :unprocessable_entity
     end
   end
+  
 
   def update
     @booking = Booking.find(params[:id])
