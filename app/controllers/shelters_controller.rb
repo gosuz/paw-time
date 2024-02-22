@@ -14,8 +14,8 @@ class SheltersController < ApplicationController
   end
 
   def create
-    # Going to post the form to where????
     @shelter = Shelter.new(shelter_params)
+    @shelter.user = current_user
     if @shelter.save
       # redirect_to shelter they just created
       redirect_to shelter_path(@shelter)
@@ -27,6 +27,6 @@ class SheltersController < ApplicationController
 
   private
   def shelter_params
-    params.require(:shelter).permit(:name, :location, :capacity, :logo, :banner, :description)
+    params.require(:shelter).permit(:name, :location, :capacity, :logo, :description)
   end
 end
