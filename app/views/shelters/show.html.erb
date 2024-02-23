@@ -1,7 +1,9 @@
 
  <div class="shelter-banner" style= "background-image: url(<%= (@shelter.c_banner.present? && @shelter.c_banner.attached?) ? cl_image_path(@shelter.c_banner.key) : image_path('https://cdn.firespring.com/images/422d7c06-dc88-45f3-830c-b3851e15e1c3.jpg') %>)">
       <h1 class="white-text"><%= @shelter.name %></h1>
-<%=image_tag @shelter.logo, class: "avatar-bordered"%>
+      <% if @shelter.logo  %>
+  <%=image_tag @shelter.logo, class: "avatar-bordered"%>
+  <% end %>
     </div>
 <div class="container">
 

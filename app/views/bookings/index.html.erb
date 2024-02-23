@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-3 text-center">
                   <% if booking.pending? %>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center text-primary">
                       <%= simple_form_for booking do |f| %>
                         <%= f.input :status, as: :hidden, input_html: { value: 'Confirmed'} %>
                         <%= f.submit 'Confirm', class: 'btn btn-info' %>
