@@ -8,7 +8,7 @@
     item_wrapper_class: 'time-slot-item',
     input_html: {class: 'time-slot-selector'},
     collection: Booking::TIME_SLOT %>
-  <%= f.input :reason, collection: ['Volunteer', 'Visit only', 'Adoption'], :class => "form-input-field" %>
+  <%= f.input :reason, collection: ['Volunteer', 'Visit only', 'Adoption'], :class => "form-input-field", include_blank: false, include_hidden: false %>
   <%# need to fix the empty box later %>
   <div class="d-grid">
   <%= f.submit "Book Visit", :class => "button-blue"%>
