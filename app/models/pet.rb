@@ -3,5 +3,7 @@ class Pet < ApplicationRecord
   has_one_attached :c_pet
 
   # image doesn't need validation
-  validates :name, :species, presence: true
+  SPECIES = ["Dog", "Cat"]
+  validates :species, inclusion: { in: SPECIES }
+  validates :name, presence: true
 end

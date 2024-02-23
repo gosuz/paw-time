@@ -1,19 +1,19 @@
-.time-slot-wrapper {
+.species-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.time-slot-item {
-  flex: 0 0 30%;
+.species-item {
+  flex: 0 0 40%;
 }
 
-.time-slot-selector {
+.species-selector {
   position: absolute;
   transform: scale(0);
 }
 
-.time-slot-selector + label {
+.species-selector + label {
   display: block;
   cursor: pointer;
   box-sizing: border-box;
@@ -26,20 +26,21 @@
   background-color: white;
 }
 
-.time-slot-selector:checked + label {
+.species-selector:checked + label {
   color: white !important;
 }
 
-#booking_time_slot_morning_10am_-_12pm + label  {
+
+#pet_species_dog + label {
   color: black;
   position: relative;
   &::after {
     position: absolute;
-    right: 8px;
-    bottom: 8px;
+    right: 16px;
+    bottom: 16px;
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    content: "\f0f4";
+    content: "\f6d3";
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     display: var(--fa-display, inline-block);
@@ -47,64 +48,42 @@
     font-variant: normal;
     line-height: 1;
     text-rendering: auto;
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
-#booking_time_slot_morning_10am_-_12pm:checked + label {
+#pet_species_cat + label {
+  color: black;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f6be";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: 24px;
+  }
+}
+
+#pet_species_dog:checked + label {
   background-color: #6CDAE7;
   border-color: #6CDAE7;
 }
 
-#booking_time_slot_afternoon_1pm_-_3pm_____ + label  {
+
+#pet_species_cat+ label {
   color: black;
-  position: relative;
-  &::after {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f185";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
-    font-size: 18px;
-  }
 }
 
-#booking_time_slot_afternoon_1pm_-_3pm_____:checked + label {
-  background-color: #6CDAE7;
-  border-color: #6CDAE7;
-}
-
-
-#booking_time_slot_evening_4pm_-_6pm + label {
-  color: black;
-  position: relative;
-  &::after {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f186";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
-    font-size: 18px;
-  }
-}
-
-#booking_time_slot_evening_4pm_-_6pm:checked + label {
+#pet_species_cat:checked + label {
   background-color: #6CDAE7;
   border-color: #6CDAE7;
 }

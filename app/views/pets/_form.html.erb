@@ -1,8 +1,18 @@
 <%# Create a form that has inputs for name, species(dog or cat), photo %>
+<div class="form-card-form">
 <%= simple_form_for [@shelter, @pet] do |f| %>
   <%= f.input :name %>
   <%# drop down for it??? %>
-  <%= f.input :species, collection: ['Dog', 'Cat'], as: :radio_buttons %>
+  <%= f.input :species,
+    as: :radio_buttons,
+    collection_wrapper_tag: 'div',
+    collection_wrapper_class: 'species-wrapper',
+    item_wrapper_class: 'species-item',
+    input_html: {class: 'species-selector'},
+  collection: Pet::SPECIES%>
   <%= f.input :c_pet, as: :file,  label: "Upload image of pet: " %>
-  <%= f.submit 'Add pet' %>
+  <div class="d-grid">
+  <%= f.submit 'Add pet', :class => "button-blue" %>
+  </div>
 <% end %>
+</div>

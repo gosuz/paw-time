@@ -47,10 +47,22 @@
               </div>
             </div>
           <% end %>
+<% if @shelter.user == current_user %>
+<div class="col-md-4 form-card p-4">
+            <div class="sticky-top my-3">
+            <div class="add-pet-card-image">
+                <h2 class="pet-form-card-heading">Add Animal
+				          <small>New dog or cat at the shelter? Add them here!</small>
+			          </h2>
+              </div>
+  <%= render "pets/form" %>
+   </div>
+              </div>
+            </div>
+<% end %>
+</div>
+    </div>
+</div>
         </div>
     </div>
 </div>
-
-<% if @shelter.user == current_user %>
-  <%= render "pets/form" %>
-<% end %>
