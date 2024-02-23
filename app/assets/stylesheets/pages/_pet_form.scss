@@ -1,0 +1,89 @@
+.species-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.species-item {
+  flex: 0 0 40%;
+}
+
+.species-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.species-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.species-selector:checked + label {
+  color: white !important;
+}
+
+
+#pet_species_dog + label {
+  color: black;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f6d3";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: 24px;
+  }
+}
+
+#pet_species_cat + label {
+  color: black;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f6be";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: 24px;
+  }
+}
+
+#pet_species_dog:checked + label {
+  background-color: #6CDAE7;
+  border-color: #6CDAE7;
+}
+
+
+#pet_species_cat+ label {
+  color: black;
+}
+
+#pet_species_cat:checked + label {
+  background-color: #6CDAE7;
+  border-color: #6CDAE7;
+}

@@ -51,6 +51,17 @@ input {
 	position: relative;
 }
 
+.add-pet-card-image {
+	border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	background-image: url('https://c02.purpledshub.com/uploads/sites/41/2021/01/stroke-cat-f9a98e5.jpg');
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: center;
+	position: relative;
+}
+
 .form-card-heading {
 	position: absolute;
 	left: 10%;
@@ -67,6 +78,25 @@ input {
 		font-weight: 400;
 		margin-top: .25em;
     text-shadow: 1px 1px 2px rgb(143, 143, 143);
+	}
+}
+
+.pet-form-card-heading {
+	position: absolute;
+	left: 10%;
+	top: 35%;
+	right: 10%;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #ffffff;
+  text-shadow: 1px 1px 3px rgb(83, 83, 83);
+	line-height: 1.222;
+	small {
+		display: block;
+		font-size: .75em;
+		font-weight: 400;
+		margin-top: .25em;
+    text-shadow: 1px 1px 3px rgb(82, 82, 82);
 	}
 }
 
