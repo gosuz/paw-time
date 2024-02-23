@@ -16,6 +16,10 @@
   background-color: #D3AC2D;
 }
 
+.button-deny:hover {
+  background-color: #D3AC2D;
+}
+
 .button-blue {
   background-color: #6CDAE7;
   border: none;
@@ -30,7 +34,34 @@
   color: white;
 }
 
+.button-confirm {
+  background-color: #6CDAE7;
+  border: none;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  text-decoration:none;
+  color: white;
+}
+
+.button-deny {
+  background-color: #FFD758;
+  border: none;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-decoration:none;
+  color: white;
+}
+
 .button-blue:hover {
+  background-color: #54A5AF;
+}
+.button-confirm:hover {
   background-color: #54A5AF;
 }
 
@@ -47,4 +78,20 @@
   border-radius: 5px;
   text-decoration:none;
   color: white;
+}
+
+.circle-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(79, 213, 79);
+  border: none;
+}
+
+.circle-button-decline {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(214, 72, 72);
+  border: none;
 }
