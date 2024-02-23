@@ -13,8 +13,10 @@
       <div class="card">
         <% if pet.c_pet.attached? %>
           <%= cl_image_tag pet.c_pet.key, class: "card-img" %>
-        <% else %>
+        <% elsif pet.image %>
           <%= image_tag pet.image, class: "card-img" %>
+        <% else %>
+          <%= image_tag "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708672535/development/rpk3g9xxlu0bt079b9mixi03ner8.png", class: "card-img" %>
         <% end %>
         <div class="card-content">
           <div class="card-text">
