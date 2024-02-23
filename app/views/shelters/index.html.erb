@@ -46,8 +46,10 @@
         <%# <%= image_tag shelter.banner, class: "card-img" %>
         <% if shelter.c_banner.attached? %>
           <%= cl_image_tag shelter.c_banner.key, class: "card-img" %>
-        <% else %>
+        <% elsif !shelter.banner.nil? %>
           <%= image_tag shelter.banner, class: "card-img" %>
+        <% else %>
+          <%= image_tag "https://npr.brightspotcdn.com/legacy/sites/wnij/files/201806/ahs_shelter.jpeg", class: "card-img" %>
         <% end %>
         <div class="card-content">
           <div class="card-text">
