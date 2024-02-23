@@ -30,9 +30,25 @@
   color: white !important;
 }
 
-
-#booking_time_slot_morning_10am_-_12pm + label {
+#booking_time_slot_morning_10am_-_12pm + label  {
   color: black;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0f4";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: 18px;
+  }
 }
 
 #booking_time_slot_morning_10am_-_12pm:checked + label {
@@ -40,9 +56,25 @@
   border-color: #6CDAE7;
 }
 
-
-#booking_time_slot_afternoon_1pm_-_3pm_____ + label {
+#booking_time_slot_afternoon_1pm_-_3pm_____ + label  {
   color: black;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f185";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: 18px;
+  }
 }
 
 #booking_time_slot_afternoon_1pm_-_3pm_____:checked + label {
@@ -53,6 +85,23 @@
 
 #booking_time_slot_evening_4pm_-_6pm + label {
   color: black;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f186";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: 18px;
+  }
 }
 
 #booking_time_slot_evening_4pm_-_6pm:checked + label {
