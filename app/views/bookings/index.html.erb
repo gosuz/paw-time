@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row justify-content-between">
     <div class="list-group col-3 sticky-top">
-      <ul>
+      <ul class="sticky-top">
         <a href="#my-bookings" class="list-group-item list-group-item-action border border-0 bg-transparent">
           <h4>My Bookings</h4>
         </a>
@@ -39,14 +39,13 @@
             </div>
           </div>
         </div>
-
       <% end %>
       <%# </div> %>
       <% if @user.shelters.any? %>
         <h2 id="shelter-bookings">My Shelter's Booking</h2>
         <div class="justify-content-center w-100">
           <% @user.shelters.each do |shelter| %>
-            <h3 id="shelter-<%= shelter.id %>"><%= shelter.name %></h3>
+            <h3 id="shelter-<%= shelter.id %>"><%=link_to shelter.name, shelter_path(shelter), class:"text-decoration-none text-black" %></h3>
             <% shelter.bookings.each do |booking| %>
               <div class="card-shelter d-flex justify-content-center flex-warp align-items-center text-center">
                 <div class="col-3 text-center">
@@ -57,10 +56,9 @@
                 </div>
                 <div class="col-3">
                   <h6 class="align-items-center">
-                  <%= booking.date %>
-                  <%= booking.time_slot %>
+                    <%= booking.date %>
+                    <%= booking.time_slot %>
                   </h6>
-
                 </div>
                 <div class="col-3 text-center">
                   <% if booking.pending? %>
@@ -78,7 +76,6 @@
                     <p class='booking-tag text-center'><%= booking.status %></p>
                   <% end %>
                 </div>
-
               </div>
             <% end %>
           <% end %>
