@@ -5,8 +5,9 @@ class Booking < ApplicationRecord
 
   belongs_to :shelter
   belongs_to :user
-
-  validates :date, :time_slot,  presence: true
+  TIME_SLOT = ["Morning: 10AM - 12PM", "Afternoon: 1PM - 3PM
+    ", "Evening: 4PM - 6PM"]
+  validates :time_slot, inclusion: { in: TIME_SLOT }
+  validates :date,  presence: true
   validates :reason, presence: true
 end
-
