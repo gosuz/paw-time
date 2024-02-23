@@ -39,6 +39,7 @@
             </div>
           </div>
         </div>
+
       <% end %>
       <%# </div> %>
       <% if @user.shelters.any? %>
@@ -49,7 +50,7 @@
             <% shelter.bookings.each do |booking| %>
               <div class="card-shelter d-flex justify-content-center flex-warp align-items-center text-center">
                 <div class="col-3 text-center">
-                  <h5>PlaceHolder</h5>
+                  <h5><%= booking.user.name %></h5>
                 </div>
                 <div class="col-3">
                   <h6><%= booking.user.email %></h6>
@@ -77,6 +78,7 @@
                     <p class='booking-tag text-center'><%= booking.status %></p>
                   <% end %>
                 </div>
+
               </div>
             <% end %>
           <% end %>

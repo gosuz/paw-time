@@ -1,11 +1,20 @@
+<div class="form-card-form">
 <%= simple_form_for [@shelter, @booking] do |f| %>
   <%= f.input :date, as: :date, html5: true%>
-  <%= f.input :time_slot, collection: ["10:00 ~ 12:00", "13:00~15:00
-", "16:00 ~ 18:00"], as: :radio_buttons %>
-  <%= f.input :reason, collection: ['Volunteer', 'Visit only', 'Adoption'] %>
+  <%= f.input :time_slot,
+    as: :radio_buttons,
+    collection_wrapper_tag: 'div',
+    collection_wrapper_class: 'time-slot-wrapper',
+    item_wrapper_class: 'time-slot-item',
+    input_html: {class: 'time-slot-selector'},
+    collection: Booking::TIME_SLOT %>
+  <%= f.input :reason, collection: ['Volunteer', 'Visit only', 'Adoption'], :class => "form-input-field" %>
   <%# need to fix the empty box later %>
-  <%= f.submit %>
+  <div class="d-grid">
+  <%= f.submit "Book Visit", :class => "button-blue"%>
+  </div>
 <% end %>
+</div>
 
 <%# <%= f.input :time_slot, collection: ["10:00 ~ 12:00", "13:00~15:00
 ", "16:00 ~ 18:00"], as: :radio_buttons %>

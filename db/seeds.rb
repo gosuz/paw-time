@@ -1,21 +1,28 @@
 puts "Creating main users..."
-go = User.new(email: "go.suz55@gmail.com", password: "123456")
+go = User.new(email: "go.suz55@gmail.com", password: "123456", name: "Go Suzuki")
 go.save
 
-nina = User.new(email: "karenina2798@gmail.com", password: "123456")
+nina = User.new(email: "karenina2798@gmail.com", password: "123456", name: "Nina Wongsordjo")
 nina.save
 
-sarah = User.new(email: "sealove14@aim.com", password: "123456")
+sarah = User.new(email: "sealove14@aim.com", password: "123456", name: "Sarah Amour")
 sarah.save
 
-hellen = User.new(email: "hellen.tamara@outlook.com", password: "123456")
+hellen = User.new(email: "hellen.tamara@outlook.com", password: "123456", name: "Hellen Naito")
 hellen.save
 
 puts "Generating other users..."
-5.times do |t|
-  user = User.new(email: "#{Faker::Name.first_name}@gmail.com", password: "123456")
-  user.save
-end
+user1 = User.new(email: "john.smith@example.com", password: "123456", name: "John Smith" )
+user1.save
+user2 = User.new(email: "emily.johnson@example.com", password: "123456", name: "Emily Johnson" )
+user2.save
+user3 = User.new(email: "michael.williams@example.com", password: "123456", name: "Michael Williams" )
+user3.save
+user4 = User.new(email: "sarah.brown@example.com", password: "123456", name: "Sarah Brown" )
+user4.save
+user5 = User.new(email: "david.jones@example.com", password: "123456", name: "David Jones" )
+user5.save
+
 
 puts "Creating shelters..."
 

@@ -1,26 +1,29 @@
- <div class="banner">
-      <h1 id="header">Paw Time</h1>
-      <h2>Adopt. Volunteer. Visit</h2>
-    <div class="search"></div>
-    </div>
+<div class="banner">
+  <h1 id="header">Paw Time</h1>
+  <h2>Adopt. Volunteer. Visit</h2>
+  <div class="search"></div>
+</div>
 <div class="container">
-<div class="index-text">
-<h1>Pet Picks For You  <i class="fa-solid fa-paw"></i></h1>
-<p> Here are some of the cute pups and kittens you can find today at <strong>shelters near you!</strong></p>
- </div>
+  <div class="index-text">
+    <h1>Pet Picks For You  <i class="fa-solid fa-paw"></i></h1>
+    <p> Here are some of the cute pups and kittens you can find today at <strong>shelters near you!</strong></p>
+  </div>
   <div class="grid">
-    <% @shelters.first(4).each do |shelter| %>
-      <% pet = shelter.pets.sample %>
+    <% @pets.last(4).reverse.each do |pet| %>
       <div class="card">
-        <%= image_tag pet.image, class: "card-img" %>
+        <% if pet.c_pet.attached? %>
+          <%= cl_image_tag pet.c_pet.key, class: "card-img" %>
+        <% else %>
+          <%= image_tag pet.image, class: "card-img" %>
+        <% end %>
         <div class="card-content">
           <div class="card-text">
             <h2><%= pet.name %></h2>
-            <h3><i class="fa-solid fa-house fa-xs"></i> <%= shelter.name %></h3>
-            <p><i class="fa-solid fa-location-dot me-1"></i>  <%= shelter.location %></p>
+            <h3><i class="fa-solid fa-house fa-xs"></i> <%= pet.shelter.name %></h3>
+            <p><i class="fa-solid fa-location-dot me-1"></i>  <%= pet.shelter.location %></p>
           </div>
           <div class="d-grid">
-          <%= link_to 'Visit my shelter', shelter_path(shelter), class: "button-blue text-decoration-none text-white"%>
+            <%= link_to 'Visit my shelter', shelter_path(pet.shelter), class: "button-blue"%>
           </div>
         </div>
       </div>
@@ -30,13 +33,13 @@
     <div>
       <img src="https://thefamilysupportcenter.org/wp-content/uploads/2018/04/kisspng-dog-paw-cougar-drawing-clip-art-paw-prints-5ad0eba3679bd0.8414908415236412514244.png" alt="dog paw" style="width: 100px">
     </div>
-    <h3 class="m-3">Pet Time is <em>Quality Time</em></h3>
-    <p class="mt-4"><strong>Pet Time</strong> is here to help you find shelters near you and reserving a visit with a furry friend. Whether you wish to adopt, volunteer or just pet a good boy or girl, <strong>Pet Time</strong> is the way to create meaningful furry friend time! </p>
+    <h3 class="m-3">Paw Time is <em>Quality Time</em></h3>
+    <p class="mt-4"><strong>Paw Time</strong> is here to help you find shelters near you and reserving a visit with a furry friend. Whether you wish to adopt, volunteer or just pet a good boy or girl, <strong>Paw Time</strong> is the way to create meaningful furry friend time! </p>
   </div>
   <div class="index-text">
-<h1>Shelters <i class="fa-solid fa-house"></i></h1>
-<p> Search through shelters to find the right one for you.</p>
- </div>
+    <h1>Shelters <i class="fa-solid fa-house"></i></h1>
+    <p> Search through shelters to find the right one for you.</p>
+  </div>
   <div class="grid-shelters">
     <% @shelters.last(6).each do |shelter| %>
       <div class="card">
@@ -52,7 +55,7 @@
             <p><i class="fa-solid fa-location-dot"></i>  <%= shelter.location %></p>
           </div>
           <div class="d-grid">
-          <%= link_to 'Book a visit', shelter_path(shelter), class: "button-yellow text-decoration-none text-white"%>
+            <%= link_to 'Book a visit', shelter_path(shelter), class: "button-yellow"%>
           </div>
         </div>
       </div>

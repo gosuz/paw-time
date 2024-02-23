@@ -13,29 +13,38 @@
               <p><%= @shelter.description %><p>
           </div>
           <div class="shelter-pet-card-container">
-              <% pets = @shelter.pets %>
+              <% pets = @shelter.pets.reverse %>
               <% pets.each do |pet| %>
                 <div class="shelter-pet-card">
+                  <%# Checks if c_pet has an image attached- specifically for  cloudinary images. Since c_pet is an image in cloudinary %>
+                  <% if pet.c_pet.attached?%>
+                  <%# Display image from cloudinary %>
+                  <%= cl_image_tag pet.c_pet.key, class: "shelter-pet-card-container-image" %>
+                  <% else %>
+                  <%# Display image from the string %>
                   <%= image_tag pet.image, class: "shelter-pet-card-container-image" %>
+                  <% end %>
                   <div class="shelter-pet-card-content">
                     <div class="shelter-pet-card-content-text">
-                      <h2><%= pet.name %></h2>
+                      <h3><%= pet.name %></h3>
                     </div>
                   </div>
               </div>
               <% end %>
           </div>
         </div>
-        <div class="col-md-4 p-3">
-           <% unless @shelter.user == current_user %>
-            <div class="bg-white border sticky-top p-3 my-3">
-              <div class="py-2">
-                <h2>Booking</h2>
+
+        <% unless @shelter.user == current_user %>
+        <div class="col-md-4 form-card p-4">
+            <div class="sticky-top my-3">
+            <div class="form-card-image">
+                <h2 class="form-card-heading">Book your visit
+				          <small>See a furry friend today</small>
+			          </h2>
               </div>
-              <%# <div class="d-grid gap-2">
-                <button type="button" class="button-blue-lg">Insert button</button>
-              </div> %>
                 <%= render "bookings/form" %>
+                </div>
+              </div>
             </div>
           <% end %>
         </div>

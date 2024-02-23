@@ -2,12 +2,13 @@ class SheltersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @shelters = Shelter.all
+    @pets = Pet.all
   end
 
   def show
     @shelter = Shelter.find(params[:id])
-    @pet = Pet.new
     @booking = Booking.new
+    @pet = Pet.new
   end
 
   def new
