@@ -32,6 +32,7 @@
         <% shelter.bookings.each do |booking| %>
           <h3><%= booking.shelter.name %></h3>
           <div class="card-product ">
+            <p><%= booking.user.name %></p>
             <p><%= booking.user.email %></p>
             <p><%= booking.date %></p>
             <% if booking.pending? %>
