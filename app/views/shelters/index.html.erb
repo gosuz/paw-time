@@ -9,7 +9,7 @@
     <p> Here are some of the cute pups and kittens you can find today at <strong>shelters near you!</strong></p>
   </div>
   <div class="grid">
-    <% @pets.last(4).each do |pet| %>
+    <% @pets.last(4).reverse.each do |pet| %>
       <div class="card">
         <% if pet.c_pet.attached? %>
           <%= cl_image_tag pet.c_pet.key, class: "card-img" %>
