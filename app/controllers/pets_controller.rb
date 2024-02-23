@@ -9,7 +9,7 @@ class PetsController < ApplicationController
     @pet.shelter = @shelter
 
     if @pet.save
-      redirect_to shelter_path(@pet) # shelter show page
+      redirect_to shelter_path(@shelter) # shelter show page
       # it should add a photo of the dog
     else
       # In shelter show page should display the same form file with the info again
