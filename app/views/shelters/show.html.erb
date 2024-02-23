@@ -16,14 +16,7 @@
               <% pets = @shelter.pets %>
               <% pets.each do |pet| %>
                 <div class="shelter-pet-card">
-                  <%# Checks if c_pet has an image attached- specifically for  cloudinary images. Since c_pet is an image in cloudinary %>
-                  <% if pet.c_pet.attached?%>
-                  <%# Display image from cloudinary %>
-                  <%= cl_image_tag pet.c_pet.key, class: "shelter-pet-card-container-image" %>
-                  <% else %>
-                  <%# Display image from the string %>
                   <%= image_tag pet.image, class: "shelter-pet-card-container-image" %>
-                  <% end %>
                   <div class="shelter-pet-card-content">
                     <div class="shelter-pet-card-content-text">
                       <h3><%= pet.name %></h3>
