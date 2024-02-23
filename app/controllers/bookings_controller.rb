@@ -11,16 +11,16 @@ class BookingsController < ApplicationController
     @booking.shelter = @shelter
     @booking.user = current_user
     if @booking.save
-      redirect_to bookings_path(@shelter)
+      redirect_to bookings_path
     else
       render "shelters/show", status: :unprocessable_entity
     end
   end
-  
+
 
   def update
     @booking = Booking.find(params[:id])
-    if @booking.update(booking_params)
+    if @booking.update(bookings_params)
       redirect_to bookings_path
     else
       render :index, status: :unprocessable_entity
@@ -30,6 +30,6 @@ class BookingsController < ApplicationController
   private
 
   def bookings_params
-    params.require(:booking).permit(:date, :reason, :time_slot, :status, :start_time, :end_time)
+    params.require(:booking).permit(:date, :reason, :time_slot, :status)
   end
 end
