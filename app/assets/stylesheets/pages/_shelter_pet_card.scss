@@ -9,8 +9,8 @@
 .shelter-pet-card {
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  width: 17rem;
-  height: 20rem;
+  width: 14rem;
+  height: 16rem;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -21,14 +21,14 @@
 }
 
 .shelter-pet-card-container-image {
-  height: 200px;
+  min-height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
 .shelter-pet-card-content {
-  padding: 16px;
-  margin-bottom: 20px;
+  padding-top: 5px;
+  margin-bottom: 0px;
   right: 16px;
   top: -20px;
   display: flex;
