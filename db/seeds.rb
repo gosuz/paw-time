@@ -51,67 +51,67 @@ shelter6.user = hellen
 shelter6.save
 
 puts "Creating pets..."
-dog1 = Pet.new(name: "Fluffy", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523162/sj0ict7cozranxmy72g5.png")
+dog1 = Pet.new(name: "Fluffy", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523162/sj0ict7cozranxmy72g5.png")
 dog1.shelter = shelter1
 dog1.save
 
-dog2 = Pet.new(name: "Nugget", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523161/r9w9abl698tni19g0fdh.png")
+dog2 = Pet.new(name: "Nugget", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523161/r9w9abl698tni19g0fdh.png")
 dog2.shelter = shelter02
 dog2.save
 
-dog3 = Pet.new(name: "Spock", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523158/h2q5hkyokczy6nzjlavf.jpg")
+dog3 = Pet.new(name: "Spock", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523158/h2q5hkyokczy6nzjlavf.jpg")
 dog3.shelter = shelter3
 dog3.save
 
-dog4 = Pet.new(name: "Pal", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523160/h3tygp1u2fe7wezegulw.png")
+dog4 = Pet.new(name: "Pal", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523160/h3tygp1u2fe7wezegulw.png")
 dog4.shelter = shelter4
 dog4.save
 
-dog5 = Pet.new(name: "Buddy", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523160/inesjl820vikdkkqjgjg.png")
+dog5 = Pet.new(name: "Buddy", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523160/inesjl820vikdkkqjgjg.png")
 dog5.shelter = shelter3
 dog5.save
 
-dog6 = Pet.new(name: "Scooby", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523161/mmbdr7fatvoxq0fmjfsf.png")
+dog6 = Pet.new(name: "Scooby", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523161/mmbdr7fatvoxq0fmjfsf.png")
 dog6.shelter = shelter1
 dog6.save
 
-dog7 = Pet.new(name: "Todo", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523160/h6vg9pur5z4jonlmujvz.png")
+dog7 = Pet.new(name: "Todo", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523160/h6vg9pur5z4jonlmujvz.png")
 dog7.shelter = shelter3
 dog7.save
 
-dog8 = Pet.new(name: "Pepe", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525944/tamas-pap-kA967nN0jAA-unsplash_cjvwkr.jpg")
+dog8 = Pet.new(name: "Pepe", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525944/tamas-pap-kA967nN0jAA-unsplash_cjvwkr.jpg")
 dog8.shelter = shelter02
 dog8.save
 
-dog9 = Pet.new(name: "Rex", species: "dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525944/stephen-andrews-lEe3-hTg4Vg-unsplash_ohmeiu.jpg")
+dog9 = Pet.new(name: "Rex", species: "Dog", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525944/stephen-andrews-lEe3-hTg4Vg-unsplash_ohmeiu.jpg")
 dog9.shelter = shelter3
 dog9.save
 
-cat1 = Pet.new(name: "Gus", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525599/Untitled_23_jqjbnl.png")
+cat1 = Pet.new(name: "Gus", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525599/Untitled_23_jqjbnl.png")
 cat1.shelter = shelter1
 cat1.save
 
-cat2 = Pet.new(name: "King", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523162/qtittjzx2noomkzecibk.png")
+cat2 = Pet.new(name: "King", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523162/qtittjzx2noomkzecibk.png")
 cat2.shelter = shelter02
 cat2.save
 
-cat3 = Pet.new(name: "Tank", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523161/ma48ritiri5x1zfkprt5.png")
+cat3 = Pet.new(name: "Tank", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523161/ma48ritiri5x1zfkprt5.png")
 cat3.shelter = shelter4
 cat3.save
 
-cat4 = Pet.new(name: "Coco", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/dog9qgug4qql5x2zhvt5.png")
+cat4 = Pet.new(name: "Coco", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/dog9qgug4qql5x2zhvt5.png")
 cat4.shelter = shelter4
 cat4.save
 
-cat5 = Pet.new(name: "Niko", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/rdrkweqyoepjsaueoyux.png")
+cat5 = Pet.new(name: "Niko", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708523159/rdrkweqyoepjsaueoyux.png")
 cat5.shelter = shelter3
 cat5.save
 
-cat6 = Pet.new(name: "Oreo", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525945/svklimkin-XMxn_NkvnR0-unsplash_zlj3rr.jpg")
+cat6 = Pet.new(name: "Oreo", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525945/svklimkin-XMxn_NkvnR0-unsplash_zlj3rr.jpg")
 cat6.shelter = shelter1
 cat6.save
 
-cat7 = Pet.new(name: "Salem", species: "cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525945/dan-wayman-Kc_4NutJIV4-unsplash_ucuo6j.jpg")
+cat7 = Pet.new(name: "Salem", species: "Cat", image: "https://res.cloudinary.com/dyqkwf9t6/image/upload/v1708525945/dan-wayman-Kc_4NutJIV4-unsplash_ucuo6j.jpg")
 cat7.shelter = shelter02
 cat7.save
 
