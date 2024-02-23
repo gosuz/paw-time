@@ -1,0 +1,61 @@
+.time-slot-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.time-slot-item {
+  flex: 0 0 30%;
+}
+
+.time-slot-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.time-slot-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.time-slot-selector:checked + label {
+  color: white !important;
+}
+
+
+#booking_time_slot_morning_10am_-_12pm + label {
+  color: black;
+}
+
+#booking_time_slot_morning_10am_-_12pm:checked + label {
+  background-color: #6CDAE7;
+  border-color: #6CDAE7;
+}
+
+
+#booking_time_slot_afternoon_1pm_-_3pm_____ + label {
+  color: black;
+}
+
+#booking_time_slot_afternoon_1pm_-_3pm_____:checked + label {
+  background-color: #6CDAE7;
+  border-color: #6CDAE7;
+}
+
+
+#booking_time_slot_evening_4pm_-_6pm + label {
+  color: black;
+}
+
+#booking_time_slot_evening_4pm_-_6pm:checked + label {
+  background-color: #6CDAE7;
+  border-color: #6CDAE7;
+}
