@@ -23,13 +23,15 @@
     <div class="col-9">
       <%# <div class="booking-card"> %>
       <h2 id="my-bookings">My Bookings</h2>
-      <%@user.bookings.each do |booking| %>
+      <% @user.bookings.each do |booking| %>
         <div class="card-product">
-          <%= image_tag booking.shelter.banner, class: "card-img img-fluid rounded-start" %>
+          <%= link_to shelter_path(booking.shelter) do %>
+            <%= image_tag booking.shelter.banner, class: "card-img img-fluid rounded-start" %>
+          <% end %>
           <div class="card-product-infos w-100">
             <div class="row d-flex justify-content-end align-contents-center">
               <div class="col-6">
-                <h4><%= booking.shelter.name %></h4>
+                <h4><%= link_to booking.shelter.name, shelter_path(booking.shelter), class: "text-decoration-none text-black" %></h4>
                 <h5><%= booking.date %></h5>
                 <h5><%= booking.time_slot %></h5>
               </div>
@@ -40,7 +42,6 @@
           </div>
         </div>
       <% end %>
-      <%# </div> %>
       <% if @user.shelters.any? %>
         <h2 id="shelter-bookings">My Shelter's Booking</h2>
         <div class="justify-content-center w-100">
@@ -82,5 +83,6 @@
         </div>
       <% end %>
     </div>
+    <%# </div> %>
   </div>
 </div>
