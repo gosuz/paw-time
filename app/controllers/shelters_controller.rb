@@ -7,6 +7,7 @@ class SheltersController < ApplicationController
   def show
     @shelter = Shelter.find(params[:id])
     @booking = Booking.new
+    @pet = Pet.new
   end
 
   def new

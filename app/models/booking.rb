@@ -9,4 +9,3 @@ class Booking < ApplicationRecord
   validates :date, :time_slot,  presence: true
   validates :reason, presence: true
 end
-

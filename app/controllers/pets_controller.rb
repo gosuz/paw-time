@@ -4,15 +4,10 @@ class PetsController < ApplicationController
   end
 
   def create
-    # For the adding pets form
-    # If it goes through render to shelters show page
-
-    # Need to get the shelter id
-    # Might need to give the pet a shelter id???
     @pet = Pet.new(pet_params)
     @shelter = Shelter.find(params[:shelter_id])
-    # need to give the pet a shelter id
     @pet.shelter = @shelter
+
     if @pet.save
       redirect_to shelter_path(@pet) # shelter show page
       # it should add a photo of the dog
