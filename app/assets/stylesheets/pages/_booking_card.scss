@@ -8,9 +8,9 @@
 .card-product {
   overflow: hidden;
   height: 180px;
-  width: 800px;
-  background-image: linear-gradient(to top, rgba(#FFF1C3, 0.20), rgba(#FFD758, 0.60));
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 900px;
+  // background-image: linear-gradient(to bottom, rgba(#def2f5, 0.20), rgba(#C6EDF2, 0.60));
+  box-shadow: 0 0 15px rgba(149, 149, 149, 0.2);
   display: flex;
   align-items: center;
   margin-bottom: 28px;
@@ -21,16 +21,19 @@
 .card-shelter {
   overflow: hidden;
   height: 65px;
-  width: 800px;
-  background-image: linear-gradient(to top, rgba(#FFF1C3, 0.20), rgba(#FFD758, 0.60));
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 900px;
+  // background-image: linear-gradient(to bottom, rgba(#def2f5, 0.20), rgba(#C6EDF2, 0.60));
+  box-shadow: 0 0 15px rgba(149, 149, 149, 0.2);
   display: flex;
   align-items: center;
   margin-top: 18px;
   margin-bottom: 28px;
   gap: 10px;
   border-radius: 25px;
-  padding-top: 10px;
+}
+
+.hello-world {
+  gap: 10px;
 }
 
 .card-product .card-img {
