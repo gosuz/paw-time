@@ -1,70 +1,70 @@
-
- <div class="shelter-banner" style= "background-image: url(<%= (@shelter.c_banner.present? && @shelter.c_banner.attached?) ? cl_image_path(@shelter.c_banner.key) : image_path('https://cdn.firespring.com/images/422d7c06-dc88-45f3-830c-b3851e15e1c3.jpg') %>)">
-      <h1 class="white-text"><%= @shelter.name %></h1>
-      <% if @shelter.logo  %>
-  <%=image_tag @shelter.logo, class: "avatar-bordered"%>
+<div class="shelter-banner" style= "background-image: url(<%= (@shelter.c_banner.present? && @shelter.c_banner.attached?) ? cl_image_path(@shelter.c_banner.key) : image_path('https://cdn.firespring.com/images/422d7c06-dc88-45f3-830c-b3851e15e1c3.jpg') %>)">
+  <h1 class="white-text"><%= @shelter.name %></h1>
+  <% if @shelter.logo  %>
+    <%=image_tag @shelter.logo, class: "avatar-bordered"%>
+  <% elsif @shelter.c_logo.attached?%>
+    <%= cl_image_tag @shelter.c_logo.key, class: "avatar-bordered" %>
   <% end %>
-    </div>
+</div>
 <div class="container">
-
-    <div class="row">
-        <div class="info col-md-8">
-        <div class="m-5"></div>
-          <div class="row m-3">
-              <h1 class="mt-4"><%= @shelter.name %></h1>
-              <p><%= @shelter.description %><p>
+  <div class="row">
+    <div class="info col-md-8">
+      <div class="m-5"></div>
+      <div class="row m-3">
+        <h1 class="mt-4"><%= @shelter.name %></h1>
+        <p><%= @shelter.description %>
+          <p>
           </div>
           <div class="shelter-pet-card-container">
-              <% pets = @shelter.pets.reverse %>
-              <% pets.each do |pet| %>
-                <div class="shelter-pet-card">
-                  <%# Checks if c_pet has an image attached- specifically for  cloudinary images. Since c_pet is an image in cloudinary %>
-                  <% if pet.c_pet.attached?%>
+            <% pets = @shelter.pets.reverse %>
+            <% pets.each do |pet| %>
+              <div class="shelter-pet-card">
+                <%# Checks if c_pet has an image attached- specifically for  cloudinary images. Since c_pet is an image in cloudinary %>
+                <% if pet.c_pet.attached?%>
                   <%# Display image from cloudinary %>
                   <%= cl_image_tag pet.c_pet.key, class: "shelter-pet-card-container-image" %>
-                  <% else %>
+                <% else %>
                   <%# Display image from the string %>
                   <%= image_tag pet.image, class: "shelter-pet-card-container-image" %>
-                  <% end %>
-                  <div class="shelter-pet-card-content">
-                    <div class="shelter-pet-card-content-text">
-                      <h3><%= pet.name %></h3>
-                    </div>
+                <% end %>
+                <div class="shelter-pet-card-content">
+                  <div class="shelter-pet-card-content-text">
+                    <h3><%= pet.name %></h3>
                   </div>
-              </div>
-              <% end %>
-          </div>
-        </div>
-
-        <% unless @shelter.user == current_user %>
-        <div class="col-md-4 form-card p-4">
-            <div class="sticky-top my-3">
-            <div class="form-card-image">
-                <h2 class="form-card-heading">Book your visit
-				          <small>See a furry friend today</small>
-			          </h2>
-              </div>
-                <%= render "bookings/form" %>
                 </div>
               </div>
-            </div>
-          <% end %>
-<% if @shelter.user == current_user %>
-<div class="col-md-4 form-card p-4">
-            <div class="sticky-top my-3">
-            <div class="add-pet-card-image">
-                <h2 class="pet-form-card-heading">Add Animal
-				          <small>New dog or cat at the shelter? Add them here!</small>
-			          </h2>
-              </div>
-  <%= render "pets/form" %>
-   </div>
-              </div>
-            </div>
-<% end %>
-</div>
-    </div>
-</div>
+            <% end %>
+          </div>
         </div>
-    </div>
+        <% unless @shelter.user == current_user %>
+          <div class="col-md-4 form-card p-4">
+            <div class="sticky-top my-3">
+              <div class="form-card-image">
+                <h2 class="form-card-heading">Book your visit
+                  <small>See a furry friend today</small>
+                </h2>
+              </div>
+              <%= render "bookings/form" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% if @shelter.user == current_user %>
+        <div class="col-md-4 form-card p-4">
+          <div class="sticky-top my-3">
+            <div class="add-pet-card-image">
+              <h2 class="pet-form-card-heading">Add Animal
+                <small>New dog or cat at the shelter? Add them here!</small>
+              </h2>
+            </div>
+            <%= render "pets/form" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
