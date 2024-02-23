@@ -13,7 +13,7 @@
               <p><%= @shelter.description %><p>
           </div>
           <div class="shelter-pet-card-container">
-              <% pets = @shelter.pets %>
+              <% pets = @shelter.pets.reverse %>
               <% pets.each do |pet| %>
                 <div class="shelter-pet-card">
                   <%# Checks if c_pet has an image attached- specifically for  cloudinary images. Since c_pet is an image in cloudinary %>
