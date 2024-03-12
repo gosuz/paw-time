@@ -7,6 +7,12 @@
 ## Set up
 ## Install gems
 `bundle install`
+gem "rails", "~> 7.1.3"
+gem "stimulus-rails"
+gem "bootstrap", "~> 5.2"
+gem "devise"
+gem 'cloudinary', '~> 1.16.0'
+gem 'faker'
 
 
 ## ENV Variables
