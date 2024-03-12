@@ -33,11 +33,13 @@ gem 'faker'
 `rails s`
 
 ## Built With
-### - Frontend: HTML, SCSS, Bootstrap, Javascript
-### - Backend: Rails 7
-### - Deployment: Heroku
-### - PostgreSQL
-### - Additional libraries: Stimulus
+
+
+### - Frontend: HTML, [SCSS](https://sass-lang.com/guide/), [Bootstrap](https://getbootstrap.com/), Javascript
+### - Backend: [Rails 7](https://guides.rubyonrails.org/)
+### - [Heroku](https://heroku.com/)
+### - [PostgreSQL](https://www.postgresql.org/)
+**Additional Libraries:** [Stimulus JS](https://stimulus.hotwired.dev/)
 
 ## Team members
 - **Sarah Amour** - *Front-end Lead*, *Project Manager*
