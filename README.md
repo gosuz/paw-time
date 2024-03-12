@@ -4,8 +4,8 @@
 
 ## Getting Started
 
-## Set up
-## Install gems
+### Set up
+### Install gems
 `bundle install`
 
 ```
