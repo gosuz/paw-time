@@ -7,12 +7,16 @@
 ## Set up
 ## Install gems
 `bundle install`
+
+```
+
 gem "rails", "~> 7.1.3"
 gem "stimulus-rails"
 gem "bootstrap", "~> 5.2"
 gem "devise"
 gem 'cloudinary', '~> 1.16.0'
 gem 'faker'
+```
 
 
 ## ENV Variables
@@ -29,7 +33,11 @@ gem 'faker'
 `rails s`
 
 ## Built With
-list of stacks
+### - Fromtend: HTML, SCSS, Bootstrap, Javascript
+### - Backend: Rails 7
+### - Deployment: Heroku
+### - PostgreSQL
+### - Additional libraries: Stimulus
 
 ## Team members
 - **Sarah Amour** - *Front-end Lead*, *Project Manager*
