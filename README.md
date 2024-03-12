@@ -33,7 +33,7 @@ gem 'faker'
 `rails s`
 
 ## Built With
-### - Fromtend: HTML, SCSS, Bootstrap, Javascript
+### - Frontend: HTML, SCSS, Bootstrap, Javascript
 ### - Backend: Rails 7
 ### - Deployment: Heroku
 ### - PostgreSQL
