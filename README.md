@@ -1,6 +1,5 @@
 # Paw-Time
 ### Paw-Time is a web appplication that connects pet shelters and users. It alllows users to make bookings to visit a shelter</p>
-### Paw-Time link: 
 <img width="1263" alt="Screenshot 2025-02-05 at 5 51 17 PM" src="https://github.com/user-attachments/assets/8f9dec4b-0ed7-4d00-b754-88d815c16935" />
 
 ## Getting Started
